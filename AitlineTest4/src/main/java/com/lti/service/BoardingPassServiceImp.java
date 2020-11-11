@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.lti.entity.BoardingPass;
 import com.lti.exception.BoardingPassServiceException;
-import com.lti.exception.FlightServiceException;
 import com.lti.repository.BoardingPassRepo;
 
 @Service
@@ -19,7 +18,7 @@ BoardingPassRepo boardingPassRepo;
 	public void generateBoardingPass(BoardingPass boardingPass) {
 		// TODO Auto-generated method stub
 		try {
-			int ticketId=boardingPassRepo.generateBoardingPass(boardingPass);
+			boardingPassRepo.generateBoardingPass(boardingPass);
 			System.out.println("Boarding Pass Added Succesfully");
 
 		}

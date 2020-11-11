@@ -6,11 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
-import com.lti.dto.SelectFlightDto;
 import com.lti.entity.Flight;
 import com.lti.exception.FlightServiceException;
-import com.lti.exception.UserServiceException;
 import com.lti.repository.FlightRepo;
+
 @Service
 public class FlightServiceImp implements FlightService {
 	@Autowired
@@ -20,29 +19,25 @@ public class FlightServiceImp implements FlightService {
 	public void addFlight(Flight flight) {
 		// TODO Auto-generated method stub
 		try {
-			int flightNo=flightRepo.addAFlight(flight);
+			flightRepo.addAFlight(flight);
 			System.out.println("Flight Added Succesfully");
 
-		}
-		catch(EmptyResultDataAccessException e)
-		{
+		} catch (EmptyResultDataAccessException e) {
 			throw new FlightServiceException("Flight could not be added");
 		}
-		
+
 	}
 
 	@Override
 	public List<Flight> search(String from, String to) {
 		// TODO Auto-generated method stub
-		List<Flight> f=flightRepo.findFlightByFromTo(from, to);
-		if(f.size()>0)
+		List<Flight> f = flightRepo.findFlightByFromTo(from, to);
+		if (f.size() > 0)
 			return f;
 		else
 			throw new FlightServiceException("No Flights available");
-		
-		
-			
-		}
+
+	}
 
 	@Override
 	public List<Flight> viewAllFlight() {
