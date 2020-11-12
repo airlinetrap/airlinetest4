@@ -5,7 +5,6 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import com.lti.entity.Payment;
-import com.lti.exception.FlightServiceException;
 import com.lti.exception.PaymentServiceException;
 import com.lti.repository.PaymentRepo;
 

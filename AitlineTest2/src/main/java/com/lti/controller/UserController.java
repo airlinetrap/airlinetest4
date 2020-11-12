@@ -1,11 +1,9 @@
 package com.lti.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +19,6 @@ import com.lti.dto.PassengerSearchDto;
 import com.lti.dto.PaymentDto;
 import com.lti.dto.ResetPasswordDto;
 import com.lti.dto.SearchFlightDto;
-import com.lti.dto.SelectFlightDto;
 import com.lti.dto.Status;
 import com.lti.dto.StatusType;
 import com.lti.dto.UserIdDto;

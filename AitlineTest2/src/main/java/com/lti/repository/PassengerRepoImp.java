@@ -11,8 +11,6 @@ import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.lti.dto.PassengerDto;
-import com.lti.entity.Flight;
 import com.lti.entity.Passenger;
 
 @Repository

@@ -2,7 +2,6 @@ package com.lti.repository;
 import java.time.LocalDate;
 import java.util.List;
 
-import com.lti.dto.PassengerDto;
 import com.lti.entity.Passenger;
 
 public interface PassengerRepo {

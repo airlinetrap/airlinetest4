@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import com.lti.entity.BoardingPass;
 import com.lti.exception.BoardingPassServiceException;
-import com.lti.exception.FlightServiceException;
 import com.lti.repository.BoardingPassRepo;
 
 @Service

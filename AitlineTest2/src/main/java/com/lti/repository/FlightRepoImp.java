@@ -4,13 +4,11 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 import org.springframework.stereotype.Repository;
 
-import com.lti.dto.SelectFlightDto;
 import com.lti.entity.Flight;
 @Repository
 public class FlightRepoImp implements FlightRepo {

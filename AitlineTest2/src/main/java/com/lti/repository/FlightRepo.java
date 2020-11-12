@@ -2,9 +2,7 @@ package com.lti.repository;
 
 import java.util.List;
 
-import com.lti.dto.SelectFlightDto;
 import com.lti.entity.Flight;
-import com.lti.entity.User;
 
 
 public interface FlightRepo {

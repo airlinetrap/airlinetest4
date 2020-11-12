@@ -7,9 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
-import com.lti.dto.PassengerDto;
 import com.lti.entity.Passenger;
-import com.lti.exception.FlightServiceException;
 import com.lti.exception.PassengerServiceException;
 import com.lti.repository.PassengerRepo;
 
