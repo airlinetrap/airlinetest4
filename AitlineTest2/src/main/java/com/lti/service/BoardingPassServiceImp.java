@@ -15,11 +15,18 @@ import com.lti.repository.BoardingPassRepo;
 public class BoardingPassServiceImp implements BoardingPassService {
 @Autowired
 BoardingPassRepo boardingPassRepo;
+@Autowired
+EmailService emailService;
 	@Override
 	public void generateBoardingPass(BoardingPass boardingPass) {
 		// TODO Auto-generated method stub
 		try {
+			String email=boardingPass.getPassenger().getUser().getUserEmail();
+			String message="Passenger Name: "+boardingPass.getPassenger().getPassengerName()+"\n Flight No: "+boardingPass.getPassenger().getFlight().getFlightNo()+"\n Date Of Travel:"+
+			boardingPass.getPassenger().getDateOfTravel();
 			int ticketId=boardingPassRepo.generateBoardingPass(boardingPass);
+			emailService.sendEmailForNewRegistration(email, message, "Your Ticket Is Confirmed");
+
 			System.out.println("Boarding Pass Added Succesfully");
 
 		}
